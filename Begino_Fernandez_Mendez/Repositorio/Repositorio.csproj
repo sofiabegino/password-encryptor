@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC8FFFDA-091B-46A3-A4FD-CD670749CBC7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Repositorio</RootNamespace>
+    <AssemblyName>Repositorio</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccessCategory.cs" />
+    <Compile Include="DataAccessCreditCard.cs" />
+    <Compile Include="DataAccessDataBreaches.cs" />
+    <Compile Include="DataAccessPassword.cs" />
+    <Compile Include="DataAccessUser.cs" />
+    <Compile Include="IDataAccess.cs" />
+    <Compile Include="Migrations\202105292308520_AddedDB.cs" />
+    <Compile Include="Migrations\202105292308520_AddedDB.designer.cs">
+      <DependentUpon>202105292308520_AddedDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106052117301_addedIdToTables.cs" />
+    <Compile Include="Migrations\202106052117301_addedIdToTables.designer.cs">
+      <DependentUpon>202106052117301_addedIdToTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106110039596_addedDataBreachesClass.cs" />
+    <Compile Include="Migrations\202106110039596_addedDataBreachesClass.designer.cs">
+      <DependentUpon>202106110039596_addedDataBreachesClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106140023202_addedUserToCategory.cs" />
+    <Compile Include="Migrations\202106140023202_addedUserToCategory.designer.cs">
+      <DependentUpon>202106140023202_addedUserToCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106140054572_addedUserToCategory1.cs" />
+    <Compile Include="Migrations\202106140054572_addedUserToCategory1.designer.cs">
+      <DependentUpon>202106140054572_addedUserToCategory1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106140257278_addedConstructors.cs" />
+    <Compile Include="Migrations\202106140257278_addedConstructors.designer.cs">
+      <DependentUpon>202106140257278_addedConstructors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106141911326_addedCategoryToPassword.cs" />
+    <Compile Include="Migrations\202106141911326_addedCategoryToPassword.designer.cs">
+      <DependentUpon>202106141911326_addedCategoryToPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106170404089_addedpasswordEncryption.cs" />
+    <Compile Include="Migrations\202106170404089_addedpasswordEncryption.designer.cs">
+      <DependentUpon>202106170404089_addedpasswordEncryption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106170101074_changedPasswordAtribute.cs" />
+    <Compile Include="Migrations\202106170101074_changedPasswordAtribute.designer.cs">
+      <DependentUpon>202106170101074_changedPasswordAtribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106171945479_fixedStrenghtInPassword.cs" />
+    <Compile Include="Migrations\202106171945479_fixedStrenghtInPassword.designer.cs">
+      <DependentUpon>202106171945479_fixedStrenghtInPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106172045500_AddedAdapter.cs" />
+    <Compile Include="Migrations\202106172045500_AddedAdapter.designer.cs">
+      <DependentUpon>202106172045500_AddedAdapter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="PasswordManagerDBContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="bin\Debug\Repositorio.dll.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Repositorio.csproj.CopyComplete" />
+    <None Include="obj\Debug\Repositorio.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Repositorio.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\Repositorio.csprojAssemblyReference.cache" />
+    <None Include="obj\Release\Repositorio.csprojAssemblyReference.cache" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominioo\Dominio.csproj">
+      <Project>{034D27FA-CFDB-4399-B600-A74EF05A6258}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202105292308520_AddedDB.resx">
+      <DependentUpon>202105292308520_AddedDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106052117301_addedIdToTables.resx">
+      <DependentUpon>202106052117301_addedIdToTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106110039596_addedDataBreachesClass.resx">
+      <DependentUpon>202106110039596_addedDataBreachesClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106140023202_addedUserToCategory.resx">
+      <DependentUpon>202106140023202_addedUserToCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106140054572_addedUserToCategory1.resx">
+      <DependentUpon>202106140054572_addedUserToCategory1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106140257278_addedConstructors.resx">
+      <DependentUpon>202106140257278_addedConstructors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106141911326_addedCategoryToPassword.resx">
+      <DependentUpon>202106141911326_addedCategoryToPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106170404089_addedpasswordEncryption.resx">
+      <DependentUpon>202106170404089_addedpasswordEncryption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106170101074_changedPasswordAtribute.resx">
+      <DependentUpon>202106170101074_changedPasswordAtribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106171945479_fixedStrenghtInPassword.resx">
+      <DependentUpon>202106171945479_fixedStrenghtInPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106172045500_AddedAdapter.resx">
+      <DependentUpon>202106172045500_AddedAdapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\Repositorio.Migrations.AddedDB.resources" />
+    <EmbeddedResource Include="obj\Debug\Repositorio.Migrations.addedIdToTables.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Dominioo.dll" />
+    <Content Include="bin\Debug\Dominioo.pdb" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\Repositorio.dll" />
+    <Content Include="bin\Debug\Repositorio.pdb" />
+    <Content Include="obj\Debug\Repositorio.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Repositorio.dll" />
+    <Content Include="obj\Debug\Repositorio.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
